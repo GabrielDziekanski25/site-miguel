@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parabéns Miguel!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-pink-200 flex items-center justify-center min-h-screen p-6">
+    <div
+      class="bg-white rounded-3xl shadow-2xl p-12 max-w-3xl text-center relative overflow-hidden"
+    >
+      <!-- Confetes animados -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="confete bg-pink-400 w-8 h-8 rounded-full"></div>
+        <div class="confete bg-yellow-400 w-7 h-7 rounded-full"></div>
+        <div class="confete bg-blue-400 w-9 h-9 rounded-full"></div>
+        <div class="confete bg-green-400 w-8 h-8 rounded-full"></div>
+        <div class="confete bg-purple-400 w-7 h-7 rounded-full"></div>
+      </div>
+
+      <!-- Imagem grande da Peppa Pig -->
+      <img src="peppa.webp" alt="Peppa Pig" class="w-80 mx-auto mb-8" />
+
+      <!-- Título grande e destacado -->
+      <h1 class="text-6xl font-extrabold mb-6 text-pink-600 drop-shadow-lg">
+        Oi Miguel!
+      </h1>
+
+      <!-- Mensagem maior e clara -->
+      <p class="text-gray-800 text-3xl mb-8 font-bold leading-snug">
+        Peppa Pig está aqui para te parabenizar! 🎉<br />
+        Comer sozinho é divertido, e você está arrasando! 😋
+      </p>
+    </div>
+
+    <style>
+      @keyframes bounce-slow {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+      .confete {
+        position: absolute;
+        top: -10px;
+        animation: cair 5s linear infinite;
+      }
+      @keyframes cair {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          left: calc(10% + 80% * var(--i));
+        }
+        100% {
+          transform: translateY(120vh) rotate(360deg);
+          left: calc(10% + 80% * var(--i));
+        }
+      }
+      .confete:nth-child(1) {
+        --i: 0.1;
+        animation-delay: 0s;
+      }
+      .confete:nth-child(2) {
+        --i: 0.3;
+        animation-delay: 1s;
+      }
+      .confete:nth-child(3) {
+        --i: 0.5;
+        animation-delay: 2s;
+      }
+      .confete:nth-child(4) {
+        --i: 0.7;
+        animation-delay: 3s;
+      }
+      .confete:nth-child(5) {
+        --i: 0.9;
+        animation-delay: 4s;
+      }
+    </style>
+  </body>
+</html>
